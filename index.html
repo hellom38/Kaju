@@ -44,7 +44,7 @@ background-color: #DBF9FC;
   background-color: #1868d9;
   border: black;
   color: white;
-  padding: 15px 32px;
+  padding: 1px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -75,13 +75,51 @@ background-color: #DBF9FC;
   background-color: rgba(0,0,0,.15);
     color: #fff;
 }
+.card {
+  width: 500px;
+  height: 100px;
+  flex-direction: column;
+  position: absolute;
+  left:40%;
+  top:40%;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid #d2d2dc;
+  border-radius: 6px;
+  -webkit-box-shadow: 0px 0px 5px 0px rgb(249, 249, 250);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(212, 182, 212, 1);
+  box-shadow: 0px 0px 5px 0px rgb(161, 163, 164);
+}
 
+.cookies a {
+  text-decoration: none;
+  color: #000;
+  margin-top: 8px;
+  top: 40%;
+}
+
+.cookies a:hover {
+  text-decoration: none;
+  color: blue;
+  margin-top: 8px;
+}
+.cookies button {
+    background-color: blue;
+    width: 100px;
+    
+}
 
     </style>
 
 <!-- scripts -->
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
 <script>
+    function SetCookie(){
+        const element = document.getElementById("Popup");
+        element.remove();
+    }
     function GetWebsite(){
         var SearchBar = document.getElementsByClassName("search_bar")[1].value;
         window.open("http://api.proxiesapi.com/?auth_key=92a0f97c79904557f17477c7fce22933_sr98766_ooPq87&url=" + SearchBar)
@@ -150,7 +188,12 @@ detect('chrome-extension://' + "oielpdpimpbgeeommmdaolanjfabgcpo", alert('boom!'
 <p class="Updates"> TEASERS</p>
 <p class="Updates"> - EXTENSION BLOCKER!!</p>
 <p class="Updates"> Produced by Kajuliver(c)</p>
-
+<div class="d-flex justify-content-center mt-5 h-100">
+        <div id="Popup" class="d-flex align-items-center align-self-center card p-3 text-center cookies"><img src="https://i.imgur.com/Tl8ZBUe.png" width="50"><span class="mt-2">We use third party cookies to personalize content, ads and analyze site traffic and to store data.  </span><a class="d-flex align-items-center" href="https://github.com/hellom38/Kaju/blob/main/README.md">Learn more<i class="fa fa-angle-right ml-2"></i></a>
+            <button
+                id="ConsentButton" class="btn btn-dark mt-3 px-4" type="button" onclick="SetCookie()">Okay</button>
+        </div>
+    </div>
 </body>
 
 
@@ -160,6 +203,7 @@ detect('chrome-extension://' + "oielpdpimpbgeeommmdaolanjfabgcpo", alert('boom!'
  
 ?>
 -->
+
 <!-- .JAVA file
 
 package com.EECE412A3.Server;
