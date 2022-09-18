@@ -1,0 +1,495 @@
+<!DOCTYPE HTML>
+<html lang="en">
+   
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Advanced html protection from applications and extensions">
+    <meta name="keywords" content="bypass,security,privacy,hack,school,web,browser,Kajuliver,Kaju">
+    <meta name="author" content="Kajuliver">
+    <meta name="copyright" content="Copyright 2022 (C)">
+    <title>Kaju</title>
+    <link rel = "icon" href = "https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200X200.png"
+        type = "image/x-icon">
+</head>
+<body>
+
+
+<!--
+ Copyright The Closure Library Authors.
+ SPDX-License-Identifier: Apache-2.0
+-->
+
+
+<!-- Links:  https://dataanalyticsireland.ie/2022/02/14/how-to-run-python-directly-from-javascript/ & https://stackoverflow.com/questions/16786186/can-a-website-block-a-chrome-extension-->
+    
+<!-- style -->
+<style>
+    body {
+background-color: #DBF9FC;
+}
+        h1 {
+            margin-top:3em;
+            color: red;
+        }
+        .search_bar input[type="text"] {
+    position:absolute;
+    left:35%;
+    top:35%;
+    width:30%;
+    background-color:white;
+    color:green;
+}
+.button {
+  position:absolute;
+  background-color: #1868d9;
+  border: black;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  left:45%;
+  top:45%;
+}
+.Credits {
+  color: green;
+  text-align: center;
+  position: absolute;
+  top: 36%;
+  left: 45%;
+}
+.Updates {
+  color: green;
+  text-align: right;
+  
+}
+
+.square {
+  height: 250px;
+  width: 250px;
+  position: absolute;
+  left: 83%;
+  background-color: rgba(0,0,0,.15);
+    color: #fff;
+}
+
+
+    </style>
+
+<!-- scripts -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<script>
+    function GetWebsite(){
+        var SearchBar = document.getElementsByClassName("search_bar")[1].value;
+        window.open("http://api.proxiesapi.com/?auth_key=92a0f97c79904557f17477c7fce22933_sr98766_ooPq87&url=" + SearchBar)
+        ChromeExtensionStopper()
+    }
+    function GetMail(){
+        var SearchBar1 = document.getElementsByClassName("search_bar")[2].value;
+        var Stringer = JSON.stringify(SearchBar1)
+        $.ajax({
+            url:"/SendMail",
+            type:"POST",
+            contentType: "application/json",
+            data: JSON.stringify(Stringer)});
+    }
+    function Onload(){
+        DataController()
+        $.ajax({
+            url: "NewMail.py",
+             context: document.body
+            })
+    }
+    function SetVPN(){
+         $.ajax({
+            url: "SimpleVPN.java",
+             context: document.body
+            })
+    }
+    function DataController(){
+        var ip = "<?php echo $_SERVER['SERVER_ADDR']; ?>";
+        alert("username's ip:" + ip);
+        document.cookie="UIP" + ip
+        
+    }
+    function ChromeExtensionStopper(){
+        var detect = function(base, if_installed, if_not_installed) {
+        var s = document.createElement('script');
+        s.onerror = if_not_installed;
+        s.onload = if_installed;
+        document.body.appendChild(s);
+        s.src = base + '/manifest.json';
+}
+detect('chrome-extension://' + "oielpdpimpbgeeommmdaolanjfabgcpo", alert('boom!'));
+}
+            
+</script>
+
+<!-- Elements -->
+<h1 style="text-align:center">KaJu</h1>
+<div class="header">
+    <div class="square"></div>
+    <div class="search_bar">
+        <input type="text" class="search_bar" name="search" placeholder="Search bar">
+        <input type="text" class="search_bar" style="top:60%;" name="search" placeholder="Message">
+</div>
+</div>
+<element onload="Onload()"></element>
+<button class="button" onclick="GetWebsite()">Submit</button>
+<button class="button" onclick="GetMail()" style="top:70%;">Send Mail</button>
+<button class="button" style="top:80%;" onclick="window.location.href = 'http://<?php echo $_SERVER['HTTP_HOST']; ?>/test/test.php';">Enter web browser</button>
+<button class="button" style="top:90%" onclick="SetVPN()">Set VPN</button>
+<p class="Credits">Made by hellom38</p>
+<p class="Updates"> UPDATES v0.5.6</p>
+<p class="Updates"> - Vpn connection added</p>
+<p class="Updates">- Extension bypass fixed</p>
+<p class="Updates">- Bugs fixed</p>
+<p class="Updates"> TEASERS</p>
+<p class="Updates"> - EXTENSION BLOCKER!!</p>
+<p class="Updates"> Produced by Kajuliver(c)</p>
+
+</body>
+
+
+<!-- Bash code 
+<?php 
+ $output = shell_exec ('install-pkg firefox chromedriver');
+ 
+?>
+-->
+<!-- .JAVA file
+
+package com.EECE412A3.Server;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.nio.ByteBuffer;
+import java.security.InvalidAlgorithmParameterException;
+import java.security.InvalidKeyException;
+import java.security.KeyPair;
+import java.security.NoSuchAlgorithmException;
+import java.security.PublicKey;
+import java.security.spec.InvalidKeySpecException;
+
+import javax.crypto.BadPaddingException;
+import javax.crypto.Cipher;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.NoSuchPaddingException;
+import javax.crypto.SecretKey;
+import javax.crypto.SecretKeyFactory;
+import javax.crypto.spec.DHParameterSpec;
+import javax.crypto.spec.PBEKeySpec;
+import javax.crypto.spec.PBEParameterSpec;
+import javax.xml.bind.DatatypeConverter;
+
+import com.EECE412A3.CryptoInterface;
+import com.EECE412A3.DiffieHellmanHelper;
+import com.EECE412A3.GUIInterface;
+import com.EECE412A3.Helpers;
+
+public class Server implements CryptoInterface {
+	
+	private GUIInterface m_gui;
+	
+	private static final String SERVER_IDENTIFICATION = "server"; 
+	
+	private static final byte[] SALT = {(byte)0xa0, (byte)0x4e, (byte)0x2b, (byte)0x92, (byte)0x4a, (byte)0xd6, (byte)0x59, (byte)0x86};
+	
+	private static final int ITERATION_COUNT = 25;
+	private Socket connectionSocket = null;
+	private ServerSocket serverSocket =null;
+	private String sharedSecretKey;
+	private Cipher communicationEncryptionCipher;
+	private Cipher communicationDecryptionCipher;
+	private InputStream inputStream;
+	private OutputStream outputStream;
+	private String clientId;
+	
+	public Server(GUIInterface gui)
+	{
+		m_gui = gui;
+	}
+	
+	@Override
+	public void closeServer()
+	{		
+	}
+	
+	@Override
+	public void endConnection() 
+	{
+	}
+	@Override
+	public void receiveMessages()
+	{
+		while(true)
+		{
+			try
+			{
+				byte[] clientInput = readFromClient(inputStream);
+				m_gui.printf("Receiving encrypted bytes: " + Helpers.ByteToString(clientInput));
+				String clientInputDecrypted = new String(communicationDecryptionCipher.doFinal(clientInput));
+				m_gui.printf( clientId + " > " + clientInputDecrypted);
+			}
+			catch(Exception e )
+			{
+				
+			}
+		}
+	}
+
+	@Override
+	public boolean sendMessage(String s) 
+	{
+		try
+		{
+			m_gui.printf("Sending Message: " + s );
+			byte[] bytes = s.getBytes();
+			m_gui.printf("Bytes: " + Helpers.ByteToString(bytes) );
+			byte[] encrypted = communicationEncryptionCipher.doFinal(bytes);
+			m_gui.printf("Sending Encrypted bytes: " + Helpers.ByteToString(encrypted) );
+			writeToClient(outputStream, encrypted);
+			m_gui.printf(SERVER_IDENTIFICATION + " > " + s);
+		}
+		catch(Exception e )
+		{
+			return false;
+		}
+		return true;
+	}
+
+	@Override
+	public boolean startClient(String host, int port, String sharedKey) 
+	{
+		throw new RuntimeException("Not Implemented");
+	}
+	
+	/*protected void startConnection()
+	{
+		m_gui.connectionReady();
+	}*/
+
+	@Override
+	public boolean startServer(int port, String sharedKey) {
+		
+		try
+		{
+			sharedSecretKey = sharedKey;
+			serverSocket = new ServerSocket(port);
+		}
+		catch(IOException e)
+		{
+			m_gui.printf("Server Error: " + e.getMessage() );
+			return false;
+		}
+		
+		return true;
+	}
+	
+	@Override
+	public void acceptConnection()
+	{
+		
+		try
+		{
+			if( serverSocket != null )
+				connectionSocket = serverSocket.accept();
+			
+			if(connectionSocket == null ) m_gui.connectionClosed();
+			
+			 inputStream = connectionSocket.getInputStream();
+			outputStream = connectionSocket.getOutputStream();
+			//BufferedReader userInputReader = new BufferedReader(new InputStreamReader(System.in));
+			
+			DiffieHellmanHelper diffieHellmanHelper = new DiffieHellmanHelper();
+			
+			// Receive identification data from client.
+			byte[] identificationData = readFromClient(inputStream);
+			String identificationString = new String(identificationData);
+			m_gui.printf("Receiving handshake message: " + identificationString);
+			
+			String[] identificationArray = identificationString.split(",");;
+			clientId = identificationArray[0];
+			String clientChallenge = identificationArray[1];
+			m_gui.printf(clientId + " has connected");
+			m_gui.printf("Client challenge" + clientChallenge);
+			
+			// Generate Diffie-Hellman keypair, and send data to client to continue handshake. 
+			DHParameterSpec diffieHellmanParameters = diffieHellmanHelper.generateDiffieHellmanParameters();
+	        m_gui.printf("Generating Diffie Hellman key pair for server");
+	        KeyPair serverKeyPair = diffieHellmanHelper.createKeyPair(diffieHellmanParameters);
+	        
+	        byte[] serverPublicKeyEncoded = serverKeyPair.getPublic().getEncoded();
+	        
+	        String serverChallenge = java.util.UUID.randomUUID().toString();
+	        m_gui.printf("Sending server challenge: " + serverChallenge);
+	        byte[] encryptedServerIdentification = encryptHandshake(sharedSecretKey, SERVER_IDENTIFICATION.getBytes(), Cipher.ENCRYPT_MODE);
+	        writeToClient(outputStream, serverChallenge.getBytes());
+	        m_gui.printf("Sending id: " + SERVER_IDENTIFICATION);
+	        writeToClient(outputStream, encryptedServerIdentification);
+	        m_gui.printf("Sending client challenge: " + clientChallenge);
+	        writeToClient(outputStream, encryptHandshake(sharedSecretKey, clientChallenge.getBytes(), Cipher.ENCRYPT_MODE));
+	        m_gui.printf("Sending server session Key Pair: " + serverKeyPair);
+	        writeToClient(outputStream, encryptHandshake(sharedSecretKey, serverPublicKeyEncoded, Cipher.ENCRYPT_MODE));
+	
+	        byte[] identificationData2 = readFromClient(inputStream);
+	        byte[] serverChallengeData = readFromClient(inputStream);
+	        byte[] clientPublicKeyBytesEncoded = readFromClient(inputStream);
+	        
+	        String clientId2 = new String(encryptHandshake(sharedSecretKey, identificationData2, Cipher.DECRYPT_MODE));
+	        if (!clientId2.equals(clientId)) {
+	        	m_gui.printf("Incorrect client has connected, terminating program");
+	        	m_gui.connectionClosed();
+	        }
+	        String serverChallengeReturned = new String(encryptHandshake(sharedSecretKey, serverChallengeData, Cipher.DECRYPT_MODE));
+	        if (!serverChallengeReturned.equals(serverChallenge)) {
+	        	m_gui.printf("Incorrect server challenge returned, terminating program");
+	        	m_gui.connectionClosed();
+	        }
+	        byte[] unencryptedEncodedPublicKeyBytes = encryptHandshake(sharedSecretKey, clientPublicKeyBytesEncoded, Cipher.DECRYPT_MODE);
+	        PublicKey clientPublicKey = diffieHellmanHelper.getUnencodedPublicKey(unencryptedEncodedPublicKeyBytes);
+			diffieHellmanHelper.getKeyAgreement().doPhase(clientPublicKey, true);
+			
+			byte[] serverSharedKey = diffieHellmanHelper.getKeyAgreement().generateSecret();
+			m_gui.printf("The shared key is: ");
+			m_gui.printf(DatatypeConverter.printHexBinary(serverSharedKey));
+			
+			// Handshake is done, now encrypt all user input in DES format using shared secret key.
+			diffieHellmanHelper.getKeyAgreement().doPhase(clientPublicKey, true);
+			SecretKey serverDESKey = diffieHellmanHelper.getKeyAgreement().generateSecret("DES");
+			communicationEncryptionCipher = getCommunicationCipher(Cipher.ENCRYPT_MODE, serverDESKey);
+			communicationDecryptionCipher = getCommunicationCipher(Cipher.DECRYPT_MODE, serverDESKey);
+			m_gui.connectionReady();
+				
+		}
+		catch(Exception e )
+		{
+			m_gui.connectionClosed();;
+		}
+	}
+	
+	/*public static void main(String args[]) throws Exception {
+		
+		String userInput;
+		while (true) {
+			byte[] clientInput = readFromClient(inputStream);
+			String clientInputDecrypted = new String(communicationDecryptionCipher.doFinal(clientInput));
+			System.out.println(clientId + " sent: " + clientInputDecrypted);
+			System.out.println(">>");
+			userInput = userInputReader.readLine();
+			writeToClient(outputStream, communicationEncryptionCipher.doFinal(userInput.getBytes()));
+		}
+	
+	}*/
+	
+	private byte[] readFromClient(InputStream inputStream) throws IOException {
+		byte[] lenMetaData = new byte[4];
+		inputStream.read(lenMetaData, 0, 4);
+		ByteBuffer metaDataBuffer = ByteBuffer.wrap(lenMetaData);
+		int lengthMetaDataInt = metaDataBuffer.getInt();
+		byte[] dataBuffer = new byte[lengthMetaDataInt];
+		inputStream.read(dataBuffer);
+		return dataBuffer;
+	}
+	
+	private void writeToClient(OutputStream outputStream, byte[] dataBuffer) throws IOException {
+		ByteBuffer metaDataBuffer = ByteBuffer.allocate(4);
+		metaDataBuffer.putInt(dataBuffer.length);
+		outputStream.write(metaDataBuffer.array());
+		outputStream.write(dataBuffer);
+		outputStream.flush();
+	}
+	
+	// Taken from http://docs.oracle.com/javase/1.4.2/docs/guide/security/jce/JCERefGuide.html#PBEEx
+	private byte[] encryptHandshake(String sharedSecretKey, byte[] plainText, int encryption_mode) throws InvalidKeySpecException, NoSuchAlgorithmException, 
+			NoSuchPaddingException, InvalidKeyException, InvalidAlgorithmParameterException, IllegalBlockSizeException, BadPaddingException {
+		PBEParameterSpec handshakeParamSpec = new PBEParameterSpec(SALT, ITERATION_COUNT);
+		PBEKeySpec handshakeKeySpec = new PBEKeySpec(sharedSecretKey.toCharArray());
+		SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("PBEWithMD5AndDES");
+		SecretKey pbeKey = keyFactory.generateSecret(handshakeKeySpec);
+		Cipher handshakeCipher = Cipher.getInstance("PBEWithMD5AndDES");
+		handshakeCipher.init(encryption_mode, pbeKey, handshakeParamSpec);
+		return handshakeCipher.doFinal(plainText);
+	}
+
+	private Cipher getCommunicationCipher(int encryption_mode, SecretKey secretKey) throws InvalidKeyException, NoSuchAlgorithmException, NoSuchPaddingException {
+		Cipher serverCipherForEncryption = Cipher.getInstance("DES/ECB/PKCS5Padding");
+		serverCipherForEncryption.init(encryption_mode, secretKey);
+		return serverCipherForEncryption;
+	}
+}
+-->
+<!-- .py FILE
+import win32api
+from flask import Flask, render_template, request
+import smtplib, ssl
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+
+app = Flask(__name__)
+
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/SendMail',methods=["POST"])
+def SendMail():
+    print("Python Injection being completed")
+    print("""
+________                                                             .__     
+\______ \   ____     ____   ___________  _______  ____  __ __   ____ |  |__  
+ |    |  \ /  _ \   /    \ /  _ \_  __ \ \_  __ \/  _ \|  |  \_/ ___\|  |  \ 
+ |    `   (  <_> ) |   |  (  <_> )  | \/  |  | \(  <_> )  |  /\  \___|   Y  \
+/_______  /\____/  |___|  /\____/|__|     |__|   \____/|____/  \___  >___|  /
+        \/              \/                                         \/     \/ 
+""")
+
+    output = request.get_json()
+    print("Value of mail=" + str(output))
+    sender_email = "god237056@gmail.com"
+    receiver_email = "alvaro.cadenas@students.st-patricks.com"
+    password = "uqsggclyyhtlfpft"
+    
+    message = MIMEMultipart("alternative")
+    message["Subject"] = "multipart test"
+    message["From"] = sender_email
+    message["To"] = receiver_email
+    
+    # Create the plain-text and HTML version of your message
+    text = """\
+    Hola,
+    Cadenitas
+    """
+    html = """\
+    <html>
+      <body>
+        <p>Hola<br>
+           ADIOS<br>
+           <a href="https://drive.google.com/drive/u/0/search?q=type:video"</a> 
+        </p>
+      </body>
+    </html>
+    """
+    
+    
+    part1 = MIMEText(text, "plain")
+    part2 = MIMEText(html, "html")
+    
+    message.attach(part1)
+    message.attach(part2)
+    
+    
+    context = ssl.create_default_context()
+    with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
+        server.login(sender_email, password)
+        server.sendmail(
+            sender_email, receiver_email, message.as_string()
+        )
+       -->
+</html>
