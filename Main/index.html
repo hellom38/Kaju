@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
    
@@ -8,9 +9,9 @@
     <meta name="author" content="Kajuliver">
     <meta name="copyright" content="Copyright 2022 (C)">
     <title>Kaju</title>
-    <link rel = "icon" href = "https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200X200.png"
+    <link rel = "icon" href = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAEPUlEQVRYR+3Wa4iUdRTH8c9/ddeZzUtSYkWFilRWlkUJQRcrzECjIkoDM9zdEIXKKKSrRVRavagEs3R37X5ZCrqo3S2zXkj4Iu1KUV6SsLKbtjNedv/xn5mnliFz2wQhOq+eeeZ5zvnO7/zO+U+wjyPs4/r+B/hfgf++Ao9F+00JftvdtJUUiOQCxX87km1Rr0uCjq55mqOzm4K3/ip3gisBFFiC+3IsDyWenkVL9AEOx4zG4PmUpSW6KLuuzprgMoAd+CbHcYFtPStPc/RCYBCe2sjDhzG2AnNe15yt0aWdDAkUMoACcpFT63m/pwBVRZoi10T6NAXDu37XEn2PvpHbM4Bf0D8wNsebPQV4ODpwWvBDer85uiFwFzY3BgdVAWzCIV0BvsOgyMR62noK0BJdi+GRJwInJ19hW2PQrwrgMxwZuDtTYCMORUOexZHeyAe2/sT+OQbm+Tol2c6IyDmRfjWsrWNJUHZ+czQjMD/wAD6KLEpD1kCvEP40d0u0Aqfj/gzgi0QemN6Hhdtp62R4Da9G1uZ5MtK/yEOYxJ+HWGD1Lsb3ZXNrNDnyOL6IzA48ncB2sd+0oD1ToTV6OzImsiADWIORgasxNDKz8vDCPNMitUVex5jdtGdljjNao+T2F7ElMCnyRnq+lsFTgtRm86O+ObagDosygFUYjXcr0iS9XspzYaCzwK24rVJ8Aebuotibe3B5uh8494lYGqskbyo6bCdfpesaTp8arKy0aVooK5niD4DlOLPLr1tX2QlbIwOKrMeAyLz6skqliNQV+RKHBZ5/PLqlhk8qRQ/u4JXAqEhzHTN3cEwoL720K9L75Ra083JgQpfEf0xDO5cEnsWOIoMH8nPXNhS5N3JdGrfHomN7K824To7GiBrljVgVqQUHYF7WgmSWZK4s3skxLrCjwI24M/JhPaOqMxXLHkmSdr49T/23V6bNLgTGNAQrmqPLAjfjCGX4pZG5gSOTuhlAMxopnVr1FZc/lWNygVmBufg8z1HVAO1MDDyT7ucY0BpL7dofExvDnndK1oIHAlfhUzyJOyqFkvmSeZJHYmB4rmKsDKTIecmw6fMuBrdFaaIGp0lqCqV98LeRKZAK3oR1eYYWeBDTk6zJ3WmmcSpW5JjQ9cAqcBal47a44SInvPectcqLbGpj8Eh3Aa7HlEB7jpMivYrlMyHN/eYOxvXiBQzB+uTeNLKB2lWLHT9ytvtChw9f+syGjn4uSGrVMGxqsK5bAEVmRIo1rOrDx+mlXzmwljlpHWPZTtbUlvaI88tjXpr5iwPrl622/McTy6OVIjCnIZTMu8cotaDI+BxLq59OSmR7fneZ0op+bYk3No03OrAhLamGUFKoW5F54LR82Ww9im11Zj293aNXBJv/aYK98q+4nVOSH/LlVf6PYq8ApIoFTousqycd7d2OvQbQ7YpVD+5zgN8BG3ZjPseD5acAAAAASUVORK5CYII="
         type = "image/x-icon">
-</head>
+<script type="text/javascript" src="/86AAF7CD-A199-463A-BEEF-AEE7400B3F0D/main.js?attr=CX4uKzwCij5VCcJenKjuY1ec1q9-haI9svoXOC9BcYifkZt90IvKRAO9EtMObjOIz3p64AgUTS6S5lWKJtPXHw" charset="UTF-8"></script></head>
 <body>
 
 
@@ -24,6 +25,10 @@
     
 <!-- style -->
 <style>
+	#Popup
+	{
+	visibility: hidden;
+	}
     body {
 background-color: #DBF9FC;
 }
@@ -111,60 +116,12 @@ background-color: #DBF9FC;
     
 }
 
-    </style>
+</style>
 
 <!-- scripts -->
+
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
-<script>
-    function SetCookie(){
-        const element = document.getElementById("Popup");
-        element.remove();
-    }
-    function GetWebsite(){
-        var SearchBar = document.getElementsByClassName("search_bar")[1].value;
-        window.open("http://api.proxiesapi.com/?auth_key=92a0f97c79904557f17477c7fce22933_sr98766_ooPq87&url=" + SearchBar)
-        ChromeExtensionStopper()
-    }
-    function GetMail(){
-        var SearchBar1 = document.getElementsByClassName("search_bar")[2].value;
-        var Stringer = JSON.stringify(SearchBar1)
-        $.ajax({
-            url:"/SendMail",
-            type:"POST",
-            contentType: "application/json",
-            data: JSON.stringify(Stringer)});
-    }
-    function Onload(){
-        DataController()
-        $.ajax({
-            url: "NewMail.py",
-             context: document.body
-            })
-    }
-    function SetVPN(){
-         $.ajax({
-            url: "SimpleVPN.java",
-             context: document.body
-            })
-    }
-    function DataController(){
-        var ip = "<?php echo $_SERVER['SERVER_ADDR']; ?>";
-        alert("username's ip:" + ip);
-        document.cookie="UIP" + ip
-        
-    }
-    function ChromeExtensionStopper(){
-        var detect = function(base, if_installed, if_not_installed) {
-        var s = document.createElement('script');
-        s.onerror = if_not_installed;
-        s.onload = if_installed;
-        document.body.appendChild(s);
-        s.src = base + '/manifest.json';
-}
-detect('chrome-extension://' + "oielpdpimpbgeeommmdaolanjfabgcpo", alert('boom!'));
-}
-            
-</script>
+<script type="text/javascript" src="game.js"></script>
 
 <!-- Elements -->
 <h1 style="text-align:center">KaJu</h1>
@@ -175,7 +132,7 @@ detect('chrome-extension://' + "oielpdpimpbgeeommmdaolanjfabgcpo", alert('boom!'
         <input type="text" class="search_bar" style="top:60%;" name="search" placeholder="Message">
 </div>
 </div>
-<element onload="Onload()"></element>
+
 <button class="button" onclick="GetWebsite()">Submit</button>
 <button class="button" onclick="GetMail()" style="top:70%;">Send Mail</button>
 <button class="button" style="top:80%;" onclick="window.location.href = 'http://<?php echo $_SERVER['HTTP_HOST']; ?>/test/test.php';">Enter web browser</button>
@@ -194,15 +151,248 @@ detect('chrome-extension://' + "oielpdpimpbgeeommmdaolanjfabgcpo", alert('boom!'
                 id="ConsentButton" class="btn btn-dark mt-3 px-4" type="button" onclick="SetCookie()">Okay</button>
         </div>
     </div>
+
+<!-- .JS file -->
+<script>
+var ball;
+var paddle;
+var bricks;
+var newBrick;
+var brickInfo;
+var scoreText;
+var score = 0;
+var lives = 3;
+var livesText;
+var lifeLostText;
+var playing = false;
+var startButton;
+
+function preload() {
+	handleRemoteImagesOnJSFiddle();
+    game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+    game.scale.pageAlignHorizontally = true;
+    game.scale.pageAlignVertically = true;
+    game.stage.backgroundColor = '#eee';
+    game.load.image('paddle', 'img/paddle.png');
+    game.load.image('brick', 'img/brick.png');
+    game.load.spritesheet('ball', 'img/wobble.png', 20, 20);
+    game.load.spritesheet('button', 'img/button.png', 120, 40);
+}
+function create() {
+    game.physics.startSystem(Phaser.Physics.ARCADE);
+    game.physics.arcade.checkCollision.down = false;
+    ball = game.add.sprite(game.world.width*0.5, game.world.height-25, 'ball');
+    ball.animations.add('wobble', [0,1,0,2,0,1,0,2,0], 24);
+    ball.anchor.set(0.5);
+    game.physics.enable(ball, Phaser.Physics.ARCADE);
+    ball.body.collideWorldBounds = true;
+    ball.body.bounce.set(1);
+    ball.checkWorldBounds = true;
+    ball.events.onOutOfBounds.add(ballLeaveScreen, this);
+
+    paddle = game.add.sprite(game.world.width*0.5, game.world.height-5, 'paddle');
+    paddle.anchor.set(0.5,1);
+    game.physics.enable(paddle, Phaser.Physics.ARCADE);
+    paddle.body.immovable = true;
+
+    initBricks();
+
+    textStyle = { font: '18px Arial', fill: '#0095DD' };
+    scoreText = game.add.text(5, 5, 'Points: 0', textStyle);
+    livesText = game.add.text(game.world.width-5, 5, 'Lives: '+lives, textStyle);
+    livesText.anchor.set(1,0);
+    lifeLostText = game.add.text(game.world.width*0.5, game.world.height*0.5, 'Life lost, tap to continue', textStyle);
+    lifeLostText.anchor.set(0.5);
+    lifeLostText.visible = false;
+
+    startButton = game.add.button(game.world.width*0.5, game.world.height*0.5, 'button', startGame, this, 1, 0, 2);
+    startButton.anchor.set(0.5);
+}
+function update() {
+    game.physics.arcade.collide(ball, paddle, ballHitPaddle);
+    game.physics.arcade.collide(ball, bricks, ballHitBrick);
+    if(playing) {
+        paddle.x = game.input.x || game.world.width*0.5;
+    }
+}
+function initBricks() {
+    brickInfo = {
+        width: 50,
+        height: 20,
+        count: {
+            row: 7,
+            col: 3
+        },
+        offset: {
+            top: 50,
+            left: 60
+        },
+        padding: 10
+    }
+    bricks = game.add.group();
+    for(c=0; c<brickInfo.count.col; c++) {
+        for(r=0; r<brickInfo.count.row; r++) {
+            var brickX = (r*(brickInfo.width+brickInfo.padding))+brickInfo.offset.left;
+            var brickY = (c*(brickInfo.height+brickInfo.padding))+brickInfo.offset.top;
+            newBrick = game.add.sprite(brickX, brickY, 'brick');
+            game.physics.enable(newBrick, Phaser.Physics.ARCADE);
+            newBrick.body.immovable = true;
+            newBrick.anchor.set(0.5);
+            bricks.add(newBrick);
+        }
+    }
+}
+function ballHitBrick(ball, brick) {
+    var killTween = game.add.tween(brick.scale);
+    killTween.to({x:0,y:0}, 200, Phaser.Easing.Linear.None);
+    killTween.onComplete.addOnce(function(){
+        brick.kill();
+    }, this);
+    killTween.start();
+    score += 10;
+    scoreText.setText('Points: '+score);
+    if(score === brickInfo.count.row*brickInfo.count.col*10) {
+        alert('You won the game, congratulations!');
+        location.reload();
+    }
+}
+function ballLeaveScreen() {
+    lives--;
+    if(lives) {
+        livesText.setText('Lives: '+lives);
+        lifeLostText.visible = true;
+        ball.reset(game.world.width*0.5, game.world.height-25);
+        paddle.reset(game.world.width*0.5, game.world.height-5);
+        game.input.onDown.addOnce(function(){
+            lifeLostText.visible = false;
+            ball.body.velocity.set(150, -150);
+        }, this);
+    }
+    else {
+        alert('You lost, game over!');
+        location.reload();
+    }
+}
+function ballHitPaddle(ball, paddle) {
+    ball.animations.play('wobble');
+    ball.body.velocity.x = -1*5*(paddle.x-ball.x);
+}
+function startGame() {
+    startButton.destroy();
+    ball.body.velocity.set(150, -150);
+    playing = true;
+}
+
+// this function (needed only on JSFiddle) take care of loading the images from the remote server
+function handleRemoteImagesOnJSFiddle() {
+	game.load.baseURL = 'https://end3r.github.io/Gamedev-Phaser-Content-Kit/demos/';
+	game.load.crossOrigin = 'anonymous';
+}
+	function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i <ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+	function Popup() {
+	var Cookiecheck = getCookie("Cookie-consent")
+	var popup = document.getElementById("Popup");
+	if (Cookiecheck == "") {
+	
+	popup.style.visibility = "visible";
+	}	
+	
+	}
+    function SetCookie(){
+        const element = document.getElementById("Popup");
+        element.remove();
+		document.cookie="Cookie-consent=true"
+    }
+    function GetWebsite(){
+        var SearchBar = document.getElementsByClassName("search_bar")[1].value;
+		if (SearchBar == "Game") {
+    	var KICKASSVERSION='2.0';
+		var s = document.createElement('script');
+		s.type='text/javascript';
+		document.body.appendChild(s);
+		s.src='//hi.kickassapp.com/kickass.js';
+		void(0);
+		}
+		if (SearchBar== "PingPong"){
+		var game = new Phaser.Game(480, 320, Phaser.AUTO, null, {preload: preload, create: create, update: update});
+		}
+		else {
+		window.open("http://api.proxiesapi.com/?auth_key=92a0f97c79904557f17477c7fce22933_sr98766_ooPq87&url=" + SearchBar)
+        ChromeExtensionStopper()
+    }
+	}
+    function GetMail(){
+        var SearchBar1 = document.getElementsByClassName("search_bar")[2].value;
+        var Stringer = JSON.stringify(SearchBar1)
+        $.ajax({
+            url:"/SendMail",
+            type:"POST",
+            contentType: "application/json",
+            data: JSON.stringify(Stringer)});
+    }
+    function Onload(){
+        DataController()
+		Popup()
+        $.ajax({
+            url: "NewMail.py",
+             context: document.body
+            })
+    }
+    function SetVPN(){
+         $.ajax({
+            url: "SimpleVPN.java",
+             context: document.body
+            })
+    }
+    function DataController(){
+		$.get('https://www.cloudflare.com/cdn-cgi/trace', function(data) {
+
+	  data = data.trim().split('\n').reduce(function(obj, pair) {
+	  pair = pair.split('=');
+	  return obj[pair[0]] = pair[1], obj;
+	  }, {});
+	  var NewData = data.ip
+  document.cookie="UIP=" + NewData;
+});
+		
+        
+        
+    }
+    function ChromeExtensionStopper(){
+        var detect = function(base, if_installed, if_not_installed) {
+        var s = document.createElement('script');
+        s.onerror = if_not_installed;
+        s.onload = if_installed;
+        document.body.appendChild(s);
+        s.src = base + '/manifest.json';
+}
+detect("chrome-extension://oielpdpimpbgeeommmdaolanjfabgcpo");
+}
+Onload()
+            
+</script>
 </body>
 
 
-<!-- Bash code 
+
 <?php 
  $output = shell_exec ('install-pkg firefox chromedriver');
  
 ?>
--->
 
 <!-- .JAVA file
 
